@@ -19,6 +19,7 @@ public class InGameManager : MonoBehaviour
     private GameObject _cameraTarget;
     private GameObject _camera;
     [SerializeField] private GameObject _itemprefab;
+    [SerializeField] private GameObject _spawnpoint;
 
     public Result Result
     {
@@ -35,7 +36,11 @@ public class InGameManager : MonoBehaviour
     public float Pow
     {
         get => _pow;
-        set => _pow = value;
+        set
+        {
+            _pow = value;
+            OnPowChanged?.Invoke(_pow);
+        } 
     }
 
     public GameObject CameraTarget
@@ -61,11 +66,21 @@ public class InGameManager : MonoBehaviour
     public Action<InGameState> OnStateChanged;
     public Action<GameObject> OnCameraTargetChanged;
     public Action<Angle, Result, float> OnResult;
+    public Action<float> OnPowChanged;
 
 //バックグラウンド工場
     void Awake()
     {
         Instance = this;
+        OnPowChanged += SpawnItem;
+    }
+
+    public void SpawnItem(float Poow)
+    {
+        Debug.Log("a");
+
+        var item = Instantiate(_itemprefab, _spawnpoint.transform.position, Quaternion.identity);
+        item.GetComponent<ItemScripta>().Throw(Angle, Result,Poow*100);
     }
 }
 

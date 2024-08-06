@@ -62,7 +62,7 @@ public class Action : MonoBehaviour
 
         for (int i = 0; i < _resultPaturn.Length; i++)
             {
-                if (_time > _resultPaturn[i])
+                if (_time >= _resultPaturn[i])
                 {
                     continue;
                 }
@@ -73,10 +73,11 @@ public class Action : MonoBehaviour
             Debug.Log(_time);
             Debug.Log(_result);
             Debug.Log(_power);
-       
            _end = true;
 
-           // InGameManager.Instance.(_angle, _result, _power);  
+            InGameManager.Instance.Angle = _angle;
+            InGameManager.Instance.Result = _result;
+            InGameManager.Instance.Pow = _power;
     }
     Angle Set()
     {

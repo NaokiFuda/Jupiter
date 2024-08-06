@@ -14,24 +14,25 @@ public class CharacterManager : ScriptableObject
 [System.Serializable]
 public class Character
 {
-    [Tooltip("–¼‘O‚Å‚·"),SerializeField] public string name;
-    [Tooltip("ƒeƒNƒjƒbƒN"), SerializeField] public float technic;
-    [Tooltip("ƒpƒ["), SerializeField] public float power;
-    [Tooltip("K‰^’l"), SerializeField] public float Luc;
-    //’Ç‰Á‰Â”\
+    public Sprite characterIcon;
+    [Tooltip("ï¿½ï¿½ï¿½Oï¿½Å‚ï¿½"),SerializeField] public string name;
+    [Tooltip("ï¿½eï¿½Nï¿½jï¿½bï¿½N"), SerializeField] public float technic;
+    [Tooltip("ï¿½pï¿½ï¿½ï¿½["), SerializeField] public float power;
+    [Tooltip("ï¿½Kï¿½^ï¿½l"), SerializeField] public float Luc;
+    //ï¿½Ç‰ï¿½ï¿½Â”\
 }
 [System.Serializable]
 public class Item
 {
-    [Tooltip("–¼‘O‚Å‚·"), SerializeField]public string name;
-    //”ò‚Î‚·•¨‚Ì“à—eŸ‘æ‚Å’Ç‰Á—\’è
+    [Tooltip("ï¿½ï¿½ï¿½Oï¿½Å‚ï¿½"), SerializeField]public string name;
+    //ï¿½ï¿½Î‚ï¿½ï¿½ï¿½ï¿½Ì“ï¿½ï¿½eï¿½ï¿½ï¿½ï¿½Å’Ç‰ï¿½ï¿½\ï¿½ï¿½
 }
 [System.Serializable]
 public class Rod
 {
-    [Tooltip("–¼‘O‚Å‚·"), SerializeField] public string name;
-    [Tooltip("‚µ‚È‚è"), SerializeField] public float rodBend;
-    [Tooltip("ƒŠ[ƒ‹‚ğŠª‚­‘¬“x"), SerializeField] public float rodRollSpeed;
-    [Tooltip("ŠÆ‚ğU‚é‹­‚³"), SerializeField] public float rodPower;
-    //’Ç‰Á‰Â”\
+    [Tooltip("ï¿½ï¿½ï¿½Oï¿½Å‚ï¿½"), SerializeField] public string name;
+    [Tooltip("ï¿½ï¿½ï¿½È‚ï¿½"), SerializeField] public float rodBend;
+    [Tooltip("ï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½x"), SerializeField] public float rodRollSpeed;
+    [Tooltip("ï¿½Æ‚ï¿½Uï¿½é‹­ï¿½ï¿½"), SerializeField] public float rodPower;
+    //ï¿½Ç‰ï¿½ï¿½Â”\
 }
