@@ -5,7 +5,12 @@ using UnityEngine;
 public class CameraManager : MonoBehaviour
 {
     [SerializeField] InGameManager ingameManager;
+    [SerializeField] Vector3 defPos;
 
+    private void Start()
+    {
+        transform.position = defPos;
+    }
     private void OnEnable()
     {
         InGameManager.Instance.OnStateChanged += CameraType;
@@ -30,6 +35,7 @@ public class CameraManager : MonoBehaviour
 
     void ZoomIn()
     {
+        transform.position 
     }
     void ZoomOut()
     {
