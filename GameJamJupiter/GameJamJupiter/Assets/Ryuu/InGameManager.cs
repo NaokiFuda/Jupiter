@@ -15,7 +15,19 @@ public class InGameManager : MonoBehaviour
     [SerializeField] private int _itemID = 0;
     private int _rodID = 0;
     private InGameState _state;
+    private GameObject _cameraTarget;
+    private GameObject _camera;
 
+    public GameObject CameraTarget
+    {
+        get => _cameraTarget;
+        set
+        {
+            _cameraTarget = value;
+            OnCameraTargetChanged?.Invoke(_cameraTarget);
+        }
+    }
+    
     public InGameState State
     {
         get => _state;
@@ -25,28 +37,17 @@ public class InGameManager : MonoBehaviour
             OnStateChanged?.Invoke(_state);
         }
     }
-
-    private GameObject _item;
-    private GameObject _camera;
-
-
+    
     public Action<InGameState> OnStateChanged;
+    public Action<GameObject> OnCameraTargetChanged;
 
 
-    
-
-
-    
-    public void ZoomedIn()
-    {
-        _camera.transform.position = new Vector3(0, 0, -10);
-    }
-    //public void ATK(enum enum float)
     void Awake()
     {
         Instance = this;
     }
 }
+
 public enum InGameState
 {
     Start,
