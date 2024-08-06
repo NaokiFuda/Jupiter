@@ -9,7 +9,7 @@ public class Sponer : MonoBehaviour
     [SerializeField] bool _AnglePositive = false;
     [SerializeField] float _rotationSpeed = 10.0f; // 回転速度を指定
     [SerializeField] float _coolTime = 0.1f;       // クールタイムの間隔を秒単位で指定
-    private bool _canRotate = true;
+    [SerializeField] private bool _canRotate = true;
 
     private void Start()
     {
@@ -41,6 +41,10 @@ public class Sponer : MonoBehaviour
         if (flyPreparationState == FlyPreparationState.Charge)
         {
             InGameManager.Instance.FlyAngle = (int)transform.eulerAngles.z;
+        }
+        else if (flyPreparationState == FlyPreparationState.Angle)
+        {
+            _canRotate = true;
         }
     }
 
