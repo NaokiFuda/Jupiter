@@ -12,15 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 336138dd195cb894e905511af01fd17f, type: 3}
   m_Name: CharacterParameter
   m_EditorClassIdentifier: 
-  character:
-  - name: nanasi
-    technic: 0
-    power: 0
-    Luc: 0
-  item:
-  - name: bakudann
-  rod:
-  - name: normalRod
-    rodBend: 0
-    rodRollSpeed: 0
-    rodPower: 0
+  Date: []
