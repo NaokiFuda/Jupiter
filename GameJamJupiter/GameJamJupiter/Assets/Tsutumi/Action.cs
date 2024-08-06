@@ -6,7 +6,7 @@ using UnityEngine;
 public class Action : MonoBehaviour
 {
     [SerializeField, Tooltip("チャージするときに使用するキーを指定してください")] string _chargeKey;
-    [SerializeField, Tooltip("リリースする際にしようするキーを指定してください")] string [] _releaseKey;
+    [SerializeField, Tooltip("リリースする際にしようするキーを5つ指定してください")] string [] _releaseKey;
     [SerializeField, Tooltip("上の角度に設定するキーを指定してください")] string _highKey;
     [SerializeField, Tooltip("真ん中の角度に設定するキーを指定してください")] string _midKey;
     [SerializeField, Tooltip("下の角度に設定するキーを指定してください")] string _lowKey;
