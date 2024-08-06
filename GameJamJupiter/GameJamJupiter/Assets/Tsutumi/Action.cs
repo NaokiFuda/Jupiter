@@ -10,6 +10,7 @@ public class Action : MonoBehaviour
     [SerializeField] string _midKey;
     [SerializeField] string _lowKey;
     [SerializeField] float[] _resultPaturn;
+    [SerializeField] float _maxPower = 3;
     Result _result;
     Angle _angle;
     float _time;
@@ -28,16 +29,16 @@ public class Action : MonoBehaviour
         {
             _time += Time.deltaTime;
         }
-        if (_angleSet == false &&Input.GetButton(_chargeKey))
+        if (!_angleSet&&Input.GetButton(_chargeKey))
         {
             _chargeTime += Time.deltaTime;
         }
-        else if (_angleSet == false && Input.GetButtonUp(_chargeKey))
+        else if (!_angleSet&& Input.GetButtonUp(_chargeKey))
         {
             float _power = PowerCount(_chargeTime);
             _timeRec = true;
         }
-        else if (_angleSet == false && _timeRec && Input.GetButtonDown(_releaseKey))
+        else if (!_angleSet&& _timeRec && Input.GetButtonDown(_releaseKey))
         {
             _timeRec = false;
             _end = true;
@@ -78,7 +79,12 @@ public class Action : MonoBehaviour
     }
     float PowerCount(float power)
     {
-        float pow = CharacterManager.power * power;
+        if(power > _maxPower)
+        {
+            power = _maxPower;
+        }
+        float pow = power;
+        
         return pow;
     }
 }
