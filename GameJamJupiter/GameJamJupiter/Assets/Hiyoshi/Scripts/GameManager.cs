@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     private int _score = 0;
     private int _selectedCharactorID;
+    private int _selectedRodID;
 
     public int Score
     {
@@ -27,7 +28,15 @@ public class GameManager : MonoBehaviour
         set
         {
             _selectedCharactorID = value;
-            Debug.Log(_selectedCharactorID);
+        }
+    }
+
+    public int SelectedRodID
+    {
+        get => _selectedRodID;
+        set
+        {
+            _selectedRodID = value;
         }
     }
 
