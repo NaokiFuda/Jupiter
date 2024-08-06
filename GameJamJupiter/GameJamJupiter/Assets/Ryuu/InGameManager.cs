@@ -16,7 +16,28 @@ public class InGameManager : MonoBehaviour
     private FlyPreparationState _flyPreparationState;
 
     private int _flyAngle;
-    private float _flyCharge;
+
+    public int FlyAngle
+    {
+        get => _flyAngle;
+        set
+        {
+            _flyAngle = value;
+            OnFlyAngleChanged?.Invoke(value);
+        }
+    }
+
+    public int FlyCharge
+    {
+        get => _flyCharge;
+        set
+        {
+            _flyCharge = value;
+            OnFlyChargeChanged?.Invoke(value);
+        }
+    }
+
+    private int _flyCharge;
     private int _tecnic;
 
     private GameObject _cameraTarget;
@@ -63,6 +84,8 @@ public class InGameManager : MonoBehaviour
     public Action OnInputAction2Dawn;
     public Action OnInputAction1Up;
     public Action OnInputAction2Up;
+    public Action<int> OnFlyAngleChanged;
+    public Action<int> OnFlyChargeChanged;
 
     void Awake()
     {
@@ -114,30 +137,47 @@ public class InGameManager : MonoBehaviour
 
     private void ActionDawn1()
     {
-        if (_flyPreparationState == FlyPreparationState.Angle)
+        if (FlyPreparationState == FlyPreparationState.Angle)
         {
-            _flyPreparationState = FlyPreparationState.Charge;
+            FlyPreparationState = FlyPreparationState.Charge;
         }
     }
 
     private void ActionUp1()
     {
-        if (_flyPreparationState == FlyPreparationState.Charge)
+        if (FlyPreparationState == FlyPreparationState.Charge)
         {
-            _flyPreparationState = FlyPreparationState.Set;
+            FlyPreparationState = FlyPreparationState.Set;
         }
     }
 
     private void ActionUp2()
     {
-        if (_flyPreparationState == FlyPreparationState.Set)
+        if (FlyPreparationState == FlyPreparationState.Set)
         {
-            _flyPreparationState = FlyPreparationState.Fire;
+            FlyPreparationState = FlyPreparationState.Fire;
         }
     }
 
     private void FlyPreparationStateAction(FlyPreparationState state)
     {
+        if (state == FlyPreparationState.Angle)
+        {
+            Debug.Log("angle");
+        }
+        else if (state == FlyPreparationState.Charge)
+        {
+            Debug.Log("charge");
+        }
+        else if (state == FlyPreparationState.Set)
+        {
+            Debug.Log("set");
+        }
+        else if (state == FlyPreparationState.Fire)
+        {
+            Debug.Log("fire");
+        }
+        
         if (state == FlyPreparationState.Fire)
         {
             var item = Instantiate(_itemprefab, _spawnpoint.transform.position, Quaternion.identity);

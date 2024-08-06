@@ -16,22 +16,22 @@ public class ActionInput : MonoBehaviour
     {
         if (IsKeyDawnActionKyeDown(_actionKye)) //stringで通るのか
         {
-            InGameManager.Instance.OnInputAction1Dawn();
+            InGameManager.Instance.OnInputAction1Dawn?.Invoke();
         }
 
         if (IsKeyDawnActionKyeDown(_actionKye2))
         {
-            InGameManager.Instance.OnInputAction2Dawn();
+            InGameManager.Instance.OnInputAction2Dawn?.Invoke();
         }
 
         if (IsKeyDawnActionKyeUp(_actionKye))
         {
-            InGameManager.Instance.OnInputAction1Up();
+            InGameManager.Instance.OnInputAction1Up?.Invoke();
         }
 
         if (IsKeyDawnActionKyeUp(_actionKye2))
         {
-            InGameManager.Instance.OnInputAction2Up();
+            InGameManager.Instance.OnInputAction2Up?.Invoke();
         }
     }
 
