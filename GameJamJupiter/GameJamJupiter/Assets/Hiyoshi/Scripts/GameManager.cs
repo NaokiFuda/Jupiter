@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 /// <summary>
 /// ゲーム全体のデータを管理するスクリプト
@@ -15,7 +16,7 @@ public class GameManager : MonoBehaviour
     private int _score = 0;
     private int _selectedCharactorID;
     private int _selectedRodID;
-    private (string, int)[] _rankingData = new (string, int)[3];
+    private List<RankingDataClass> _rankingDataClasses = new List<RankingDataClass>();
 
     public string Playername
     {
@@ -47,12 +48,6 @@ public class GameManager : MonoBehaviour
     {
     }
 
-    public (string, int)[] RankingData
-    {
-        get => _rankingData;
-        private set => _rankingData = value;
-    }
-
     protected void Awake()
     {
         if (Instance == null)
@@ -69,11 +64,17 @@ public class GameManager : MonoBehaviour
     void LoadRankingData()
     {
         string json = PlayerPrefs.GetString("RankingData", null);
-        _rankingData = JsonUtility.FromJson<(string, int)[]>(json);
+        _rankingDataClasses = JsonUtility.FromJson<List<RankingDataClass>>(json);
     }
     void SaveRankingData()
     {
-        string json = JsonUtility.ToJson(_rankingData);
+        string json = JsonUtility.ToJson(_rankingDataClasses);
         PlayerPrefs.SetString("RankingData",json);
     }
+}
+[Serializable]
+public class RankingDataClass
+{
+    public string name;
+    public int score;
 }
