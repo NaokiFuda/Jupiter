@@ -2,22 +2,33 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
+/// <summary>
+/// ゲーム全体のデータを管理するスクリプト
+/// </summary>
+/// GameManager.Instanceで呼び出し
 [DefaultExecutionOrder(-100)]
 public class GameManager : MonoBehaviour
 {
-    private static GameManager _instance;
+    public static GameManager Instance { get; private set; }
     private int _score = 0;
-
-    public static GameManager Instance
-    {
-        get => _instance;
-        private set => _instance = value;
-    }
+    private int _selectedCharactorID;
 
     public int Score
     {
         get => _score;
         set => _score = value;
+    }
+
+    public int SelectedCharacterID
+    {
+        get => _selectedCharactorID;
+        set
+        {
+            _selectedCharactorID = value;
+            Debug.Log(_selectedCharactorID);
+        }
     }
 
     protected virtual void AwakeFunction()
@@ -36,5 +47,10 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void SceneMove(int sceneIndexNum)
+    {
+        SceneManager.LoadScene(sceneIndexNum);
     }
 }
