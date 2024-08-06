@@ -1,24 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Action : MonoBehaviour
 {
-    [SerializeField] string _chargeKey;
-    [SerializeField] string _releaseKey;
-    [SerializeField] string _highKey;
-    [SerializeField] string _midKey;
-    [SerializeField] string _lowKey;
-    [SerializeField] float[] _resultPaturn;
-    [SerializeField] float _maxPower = 3;
+    [SerializeField, TooltipAttribute("チャージするときに使用するキーを指定してください")] string _chargeKey;
+    [SerializeField, TooltipAttribute("リリースする際にしようするキーを指定してください")] string [] _releaseKey;
+    [SerializeField, TooltipAttribute("上の角度に設定するキーを指定してください")] string _highKey;
+    [SerializeField, TooltipAttribute("真ん中の角度に設定するキーを指定してください")] string _midKey;
+    [SerializeField, TooltipAttribute("下の角度に設定するキーを指定してください")] string _lowKey;
+    [SerializeField, TooltipAttribute("はじき入力のインターバルに対して評価する三段階の数値を指定してください")] float[] _resultPaturn;
+    [SerializeField, TooltipAttribute("パワーチャージの最大値を設定してください")] float _maxPower = 3;
+    [SerializeField] Animator _animator;
     Result _result;
     Angle _angle;
     float _time;
     float _chargeTime;
     float _power;
-    bool _angleSet = true;
-    bool _timeRec;
-    bool _end;
+   public bool _angleSet = true;
+   public bool _charge;
+   public bool _timeRec;
+   public bool _end;
     void Update()
     {
         if (_angleSet)
@@ -32,13 +35,16 @@ public class Action : MonoBehaviour
         if (!_angleSet&&Input.GetButton(_chargeKey))
         {
             _chargeTime += Time.deltaTime;
+            _charge = true;
         }
         else if (!_angleSet&& Input.GetButtonUp(_chargeKey))
         {
+            _charge = false;
             float _power = PowerCount(_chargeTime);
             _timeRec = true;
         }
-        else if (!_angleSet&& _timeRec && Input.GetButtonDown(_releaseKey))
+        else if (!_angleSet&& _timeRec && Input.GetButtonDown(_releaseKey[0])|| Input.GetButtonDown(_releaseKey[1]) || Input.GetButtonDown(_releaseKey[2]) 
+            || Input.GetButtonDown(_releaseKey[3]) || Input.GetButtonDown(_releaseKey[4]) || Input.GetButtonDown(_releaseKey[4]))
         {
             _timeRec = false;
             _end = true;
@@ -55,7 +61,6 @@ public class Action : MonoBehaviour
                 _result = (Result)i;
                 break;
             }
-            (_result, _angle, _power);
         }
     }
     Angle Set()
@@ -87,7 +92,17 @@ public class Action : MonoBehaviour
         
         return pow;
     }
+    private void LateUpdate()
+    {
+        if (_animator)
+        {
+            _animator.SetBool("Angle", _angleSet);
+            _animator.SetBool("Cherge", _charge);
+            _animator.SetBool("End", _end);
+        }
+    }
 }
+
 public enum Angle
 {
     high,
