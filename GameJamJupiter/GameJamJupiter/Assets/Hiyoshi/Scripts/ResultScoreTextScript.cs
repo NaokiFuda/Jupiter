@@ -7,10 +7,9 @@ using UnityEngine.UI;
 /// <summary>
 /// リザルトでスコアを表示させるスクリプト
 /// </summary>
-public class ScoreTextScript : MonoBehaviour
+public class ResultScoreTextScript : MonoBehaviour
 {
     private Text _scoreText;
-
     private void Awake()
     {
         _scoreText = this.gameObject.GetComponent<Text>();
