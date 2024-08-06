@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 
 /// <summary>
 /// ゲームシーンに居るクラスです インゲームを管理します
@@ -10,11 +9,24 @@ using UnityEngine.PlayerLoop;
 public class InGameManager : MonoBehaviour
 {
     public static InGameManager Instance = null;
-
     private int _characterID = 0;
     [SerializeField] private int _itemID = 0;
     private int _rodID = 0;
     private InGameState _state;
+    private Result _result;
+    private Angle _angle;
+    private GameObject _cameraTarget;
+    private GameObject _camera;
+
+    public GameObject CameraTarget
+    {
+        get => _cameraTarget;
+        set
+        {
+            _cameraTarget = value;
+            OnCameraTargetChanged?.Invoke(_cameraTarget);
+        }
+    }
 
     public InGameState State
     {
@@ -26,27 +38,16 @@ public class InGameManager : MonoBehaviour
         }
     }
 
-    private GameObject _item;
-    private GameObject _camera;
-
-
     public Action<InGameState> OnStateChanged;
+    public Action<GameObject> OnCameraTargetChanged;
 
-
-    
-
-
-    
-    public void ZoomedIn()
-    {
-        _camera.transform.position = new Vector3(0, 0, -10);
-    }
-    //public void ATK(enum enum float)
+//バックグラウンド工場
     void Awake()
     {
         Instance = this;
     }
 }
+
 public enum InGameState
 {
     Start,
