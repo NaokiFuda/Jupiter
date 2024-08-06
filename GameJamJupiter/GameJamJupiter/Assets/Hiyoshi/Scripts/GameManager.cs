@@ -48,9 +48,4 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    public void SceneMove(int sceneIndexNum)
-    {
-        SceneManager.LoadScene(sceneIndexNum);
-    }
 }
