@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class Action : MonoBehaviour
 {
-    [SerializeField, Tooltip("�`���[�W����Ƃ��Ɏg�p����L�[���w�肵�Ă�������")] string _chargeKey;
-    [SerializeField, Tooltip("�����[�X����ۂɂ��悤����L�[���w�肵�Ă�������")] string [] _releaseKey;
-    [SerializeField, Tooltip("��̊p�x�ɐݒ肷��L�[���w�肵�Ă�������")] string _highKey;
-    [SerializeField, Tooltip("�^�񒆂̊p�x�ɐݒ肷��L�[���w�肵�Ă�������")] string _midKey;
-    [SerializeField, Tooltip("���̊p�x�ɐݒ肷��L�[���w�肵�Ă�������")] string _lowKey;
-    [SerializeField, Tooltip("�͂������͂̃C���^�[�o���ɑ΂��ĕ]������O�i�K�̐��l���w�肵�Ă�������")] float[] _resultPaturn;
-    [SerializeField, Tooltip("�p���[�`���[�W�̍ő�l��ݒ肵�Ă�������")] float _maxPower = 3;
+    [SerializeField, Tooltip("チャージするときに使用するキーを指定してください")] string _chargeKey;
+    [SerializeField, Tooltip("リリースする際にしようするキーを指定してください")] string [] _releaseKey;
+    [SerializeField, Tooltip("上の角度に設定するキーを指定してください")] string _highKey;
+    [SerializeField, Tooltip("真ん中の角度に設定するキーを指定してください")] string _midKey;
+    [SerializeField, Tooltip("下の角度に設定するキーを指定してください")] string _lowKey;
+    [SerializeField, Tooltip("はじき入力のインターバルに対して評価する三段階の数値を指定してください")] float[] _resultPaturn;
+    [SerializeField, Tooltip("パワーチャージの最大値を設定してください")] float _maxPower = 3;
     [SerializeField] Animator _animator;
     Result _result;
     Angle _angle;
