@@ -6,15 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Hiyoshi/Scenes/TitleScene.unity
+    path: Assets/Hiyoshi/Scenes/0.TitleScene.unity
     guid: 9c68ebc1adf2a8344ae22af4498c7707
   - enabled: 1
-    path: Assets/Hiyoshi/Scenes/InGameScene.unity
-    guid: 0bcc95253e77fa74199bd20211be5adc
-  - enabled: 1
-    path: Assets/Hiyoshi/Scenes/MenuScene.unity
+    path: Assets/Hiyoshi/Scenes/1.MenuScene.unity
     guid: f215f4b39a283b9408af8b950ccc7179
   - enabled: 1
-    path: Assets/Hiyoshi/Scenes/ResultScene.unity
+    path: Assets/Hiyoshi/Scenes/2.CharacterSelectScene.unity
+    guid: dbeedf2afa146684fbcc77a57503d353
+  - enabled: 1
+    path: Assets/Hiyoshi/Scenes/3.RodSelect.unity
+    guid: 31e84592c046d1642869b8a3bcba1f6f
+  - enabled: 1
+    path: Assets/Hiyoshi/Scenes/4.InGameScene.unity
+    guid: 0bcc95253e77fa74199bd20211be5adc
+  - enabled: 1
+    path: Assets/Hiyoshi/Scenes/5.ResultScene.unity
     guid: ab8d22ed2899ed2469afef9283e663f0
   m_configObjects: {}
