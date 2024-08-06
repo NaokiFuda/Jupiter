@@ -22,7 +22,6 @@ public class Action : MonoBehaviour
     bool _charge;
     bool _timeRec;
     bool _end;
-
     void Update()
     {
         if (!_end)
@@ -60,23 +59,18 @@ public class Action : MonoBehaviour
     void End()
     {
         float _power = PowerCount(_chargeTime);
-        Debug.Log(_time);
 
-        if (_time > _resultPaturn[2])
-           {
-            _result = Result.faild;
-           }
-          if(_time < _resultPaturn[1])
-           {
-            _result = Result.great;
-            }
-     
-            if (_time < _resultPaturn[0])
+        for (int i = 0; i < _resultPaturn.Length; i++)
             {
-              _result = Result.ultimate;
+                if (_time > _resultPaturn[i])
+                {
+                    continue;
+                }
+                _result = (Result)i;
+                break;
             }
             Debug.Log(_angle);
-           
+            Debug.Log(_time);
             Debug.Log(_result);
             Debug.Log(_power);
        
