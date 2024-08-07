@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class CameraManager : MonoBehaviour
 {
+    [SerializeField] private Camera _camera;
     [SerializeField] private GameObject _targetObj;
     private InGameState _inGameState;
     [SerializeField] private float _maxRange = -100;
@@ -15,21 +16,21 @@ public class CameraManager : MonoBehaviour
     {
         FolllowObj();
 
-        if (InGameState.Fishing == _inGameState && transform.position.z <= _minRange)
+        if (InGameState.Fishing == _inGameState)
         {
             ZoomIn();
         }
-        else if (InGameState.ReleaseUP == _inGameState && transform.position.z >= _maxRange)
+        else if (InGameState.ReleaseUP == _inGameState)
         {
             ZoomOut();
         }
-        else if (InGameState.ReleaseDawn == _inGameState && transform.position.z <= _minRange)
+        else if (InGameState.ReleaseDawn == _inGameState)
         {
             ZoomIn();
         }
-        else if (InGameState.ReleaseEnd == _inGameState && transform.position.z <= _minRange)
+        else if (InGameState.ReleaseEnd == _inGameState)
         {
-            ZoomIn();
+            ZoomOut();
         }
     }
 
@@ -67,11 +68,13 @@ public class CameraManager : MonoBehaviour
 
     private void ZoomIn()
     {
-        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + _xoomSpeed);
+        if (_camera.fieldOfView <= _minRange) return;
+        _camera.fieldOfView -= _xoomSpeed;
     }
 
     private void ZoomOut()
     {
-        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - _xoomSpeed);
+        if (_camera.fieldOfView >= _maxRange) return;
+        _camera.fieldOfView += _xoomSpeed;
     }
 }
