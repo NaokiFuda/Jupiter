@@ -28,8 +28,10 @@ public class DebugRankingData : MonoBehaviour
         Debug.Log(tmp);
     }
 
-    void DebugDeleteRanking()
+    public void DebugDeleteRanking()
     {
         PlayerPrefs.DeleteAll();
+        GameManager.Instance.LoadRankingData();
+        Debug.Log("Delete");
     }
 }
