@@ -790,7 +790,7 @@ TextureImporter:
         width: 488
         height: 217
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -811,7 +811,7 @@ TextureImporter:
         width: 1555
         height: 1292
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -832,7 +832,7 @@ TextureImporter:
         width: 1303
         height: 1290
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -853,7 +853,7 @@ TextureImporter:
         width: 1320
         height: 1290
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -874,7 +874,7 @@ TextureImporter:
         width: 1365
         height: 1304
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -882,6 +882,111 @@ TextureImporter:
       bones: []
       spriteID: 7dbf12ef5be69da43b5daea642407a7e
       internalID: -233024811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player001_Set001
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 3029
+        width: 1402
+        height: 1282
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 409538bc528ddb14bad69fbd584a055b
+      internalID: 1222651387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player001_Set002
+      rect:
+        serializedVersion: 2
+        x: 2296
+        y: 3060
+        width: 1371
+        height: 1255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbd2d0a69b861144a920faf21287910a
+      internalID: -76583853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player001_Set003
+      rect:
+        serializedVersion: 2
+        x: 3663
+        y: 3051
+        width: 1525
+        height: 1261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81d0d4cbabd1c764c8695311371fe98d
+      internalID: -1656770195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player001_Set004
+      rect:
+        serializedVersion: 2
+        x: 5188
+        y: 3057
+        width: 1530
+        height: 1281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 122e44ea87d503e498758456efa6bbbc
+      internalID: 2037085830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player001_Finish001
+      rect:
+        serializedVersion: 2
+        x: 6715
+        y: 3060
+        width: 1454
+        height: 1879
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88fe078f180b6614cb24c78338289c08
+      internalID: -1781297834
       vertices: []
       indices: 
       edges: []
@@ -912,6 +1017,11 @@ TextureImporter:
       Fish003: 1684026600
       LandingEffect001: -1234556171
       Player001: -1894672986
+      Player001_Finish001: -1781297834
+      Player001_Set001: 1222651387
+      Player001_Set002: -76583853
+      Player001_Set003: -1656770195
+      Player001_Set004: 2037085830
       Player002: 1316467359
       Player002_Finish001: -1250233028
       Player002_Set001: 1956401137
