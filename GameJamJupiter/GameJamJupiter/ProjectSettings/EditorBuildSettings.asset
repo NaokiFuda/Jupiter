@@ -6,21 +6,36 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Hiyoshi/Scenes/0.TitleScene.unity
-    guid: 9c68ebc1adf2a8344ae22af4498c7707
+    path: Assets/Scenes/Title.unity
+    guid: 90779c4b981560c40b86629517ee39f6
   - enabled: 1
-    path: Assets/Hiyoshi/Scenes/1.MenuScene.unity
-    guid: f215f4b39a283b9408af8b950ccc7179
+    path: Assets/Scenes/Menu.unity
+    guid: 4c23904fcdac42c49a66475170b2d39d
   - enabled: 1
-    path: Assets/Hiyoshi/Scenes/2.CharacterSelectScene.unity
-    guid: dbeedf2afa146684fbcc77a57503d353
+    path: Assets/Scenes/CharacterSelect.unity
+    guid: e2d1d363858538345b7d83d30919ea53
   - enabled: 1
     path: Assets/Hiyoshi/Scenes/3.RodSelect.unity
     guid: 31e84592c046d1642869b8a3bcba1f6f
   - enabled: 1
+    path: Assets/Scenes/InGame.unity
+    guid: d608884874f71b2459074d49c97d5a0c
+  - enabled: 1
+    path: Assets/Scenes/Result.unity
+    guid: d9313c3c52849ae4ab6983ae8e7bef94
+  - enabled: 0
+    path: Assets/Hiyoshi/Scenes/0.TitleScene.unity
+    guid: 9c68ebc1adf2a8344ae22af4498c7707
+  - enabled: 0
+    path: Assets/Hiyoshi/Scenes/1.MenuScene.unity
+    guid: f215f4b39a283b9408af8b950ccc7179
+  - enabled: 0
+    path: Assets/Hiyoshi/Scenes/2.CharacterSelectScene.unity
+    guid: dbeedf2afa146684fbcc77a57503d353
+  - enabled: 0
     path: Assets/Hiyoshi/Scenes/4.InGameScene.unity
     guid: 0bcc95253e77fa74199bd20211be5adc
-  - enabled: 1
+  - enabled: 0
     path: Assets/Hiyoshi/Scenes/5.ResultScene.unity
     guid: ab8d22ed2899ed2469afef9283e663f0
   m_configObjects: {}
