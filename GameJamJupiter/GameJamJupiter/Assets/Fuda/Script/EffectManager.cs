@@ -79,10 +79,10 @@ public class EffectManager : MonoBehaviour
     void Landed()
     {
         _effectList[2].transform.position = _targetObj.transform.position;
-        if (!anim.GetBool("landed"))
-        {
-            anim.SetBool("landed", true);
-        }
+
+        anim.ResetTrigger("isFinshing");
+        anim.SetTrigger("isFinshing");
+
         if (anim.GetBool("isFalling"))
         {
             anim.SetBool("isFalling", false);
