@@ -15,6 +15,9 @@ public class InGameManager : MonoBehaviour
     private int _rodID = 0;
     private InGameState _state;
     private FlyPreparationState _flyPreparationState;
+    private int _score = 0;
+
+    
 
     private int _flyAngle;
 
@@ -36,6 +39,12 @@ public class InGameManager : MonoBehaviour
             _flyCharge = value;
             OnFlyChargeChanged?.Invoke(value);
         }
+    }
+    
+    public int Score
+    {
+        get => _score;
+        set => _score = value;
     }
 
     private int _flyCharge;
@@ -63,7 +72,7 @@ public class InGameManager : MonoBehaviour
         set
         {
             _state = value;
-            OnStateChanged?.Invoke(_state);
+            OnStateChanged?.Invoke(value);
         }
     }
 
@@ -73,7 +82,7 @@ public class InGameManager : MonoBehaviour
         set
         {
             _flyPreparationState = value;
-            OnFlyPreparationStateChanged?.Invoke(_flyPreparationState);
+            OnFlyPreparationStateChanged?.Invoke(value);
         }
     }
 
@@ -165,6 +174,7 @@ public class InGameManager : MonoBehaviour
     {
         if (state == FlyPreparationState.Angle)
         {
+            State = InGameState.Fishing;
             Debug.Log("angle");
         }
         else if (state == FlyPreparationState.Charge)
@@ -179,6 +189,8 @@ public class InGameManager : MonoBehaviour
         }
         else if (state == FlyPreparationState.Fire)
         {
+            State = InGameState.ReleaseUP;
+
             Debug.Log("fire");
         }
 
@@ -186,7 +198,7 @@ public class InGameManager : MonoBehaviour
         {
             var item = Instantiate(_itemprefab, _spawnpoint.transform.position, Quaternion.identity);
             item.GetComponent<ItemScripta>().Throw(FlyAngle, FlyCharge);
-            FlyPreparationState = FlyPreparationState.Angle;
+            CameraTarget = item;
         }
     }
 
