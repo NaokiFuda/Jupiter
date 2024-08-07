@@ -55,7 +55,9 @@ public class ItemScripta : MonoBehaviour
             }
         }
 
-        Score = startposition - (int)transform.position.x;
+        Debug.Log("a");
+
+        Score =  (int)transform.position.x - startposition ;
         InGameManager.Instance.Score = Score;
     }
 
@@ -68,9 +70,13 @@ public class ItemScripta : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("sss");
+
         if (collision.transform.TryGetComponent(out Floor floor))
         {
-            landing = false;
+            Debug.Log("saaaaa");
+
+            landing = true;
             InGameManager.Instance.State = InGameState.ReleaseEnd;
         }
     }

@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 1321312143968800490}
   - component: {fileID: 5005234351698225648}
   - component: {fileID: 2658704535067641940}
-  - component: {fileID: 7180437716198320311}
+  - component: {fileID: 1631312071440540862}
+  - component: {fileID: 89865560970736971}
   m_Layer: 0
   m_Name: ItemPrefub
   m_TagString: Untagged
@@ -48,10 +49,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rb: {fileID: 2658704535067641940}
-  _hightAngle: 45
-  _midAngle: 30
-  _lowAngle: 15
-  _reverseAngle: 90
 --- !u!212 &5005234351698225648
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -116,9 +113,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_Mass: 1.53
+  m_LinearDrag: 3.92
+  m_AngularDrag: 5.24
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -131,7 +128,52 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &7180437716198320311
+--- !u!61 &1631312071440540862
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7497082195734110053}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.73, y: 1.71}
+    newSize: {x: 4.73, y: 1.71}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.73, y: 1.71}
+  m_EdgeRadius: 0
+--- !u!58 &89865560970736971
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
