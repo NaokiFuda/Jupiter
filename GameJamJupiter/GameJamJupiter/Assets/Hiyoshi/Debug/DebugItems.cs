@@ -7,14 +7,14 @@ public class DebugItems : MonoBehaviour
 {
     private void Start()
     {
-        DebugItemsID();
+        //DebugItemsID();
         DebugPlayerName();
     }
 
-    void DebugItemsID()
-    {
-        Debug.Log($"キャラ:{GameManager.Instance.SelectedCharacterID} Rod:{GameManager.Instance.SelectedRodID}");
-    }
+    // void DebugItemsID()
+    // {
+    //     Debug.Log($"キャラ:{GameManager.Instance.SelectedCharacterID} Rod:{GameManager.Instance.SelectedRodID}");
+    // }
 
     void DebugPlayerName()
     {
