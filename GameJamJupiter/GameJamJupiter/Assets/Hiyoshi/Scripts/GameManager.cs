@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     private int _selectedCharactorID;
     private int _selectedRodID;
     private (string, int)[] _rankingData = new (string, int)[3];
+    [SerializeField] public List<string> _actionKye ;
+    [SerializeField] public List<string> _actionKye2;
 
     public string Playername
     {
