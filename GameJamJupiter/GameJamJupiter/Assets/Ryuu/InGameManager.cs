@@ -9,6 +9,12 @@ using UnityEngine;
 [DefaultExecutionOrder(-99)]
 public class InGameManager : MonoBehaviour
 {
+    GameObject _charge;
+    [SerializeField] AudioClip _inGameBgm;
+    [SerializeField,Tooltip("1番目にはセレクト効果音を入れてください、2番目にはimpactを入れてください,2番目にはフライを入れてください")] AudioClip[]_soundEffect;
+    [SerializeField] GameObject _chargeEffect;
+    [SerializeField] GameObject _fisshing2Effect;
+    [SerializeField] bool _everyBgm = true;
     public static InGameManager Instance = null;
     private int _characterID = 0;
     private int _itemID = 0;
@@ -126,14 +132,23 @@ public class InGameManager : MonoBehaviour
         if (state == InGameState.Start)
         {
             Debug.Log("start");
+            SoundManager.Instance.MuteBGM(false);
+            SoundManager.Instance.PlayBGM(_inGameBgm);
         }
         else if (state == InGameState.Fishing)
         {
             Debug.Log("fishing");
+
         }
         else if (state == InGameState.ReleaseUP)
         {
             Debug.Log(" release up");
+            if (!_everyBgm)
+            {
+                SoundManager.Instance.MuteBGM(true);
+            }
+            Destroy(Instantiate(_fisshing2Effect),2);
+            SoundManager.Instance.PlayloopSE(_soundEffect[2]);
         }
         else if (state == InGameState.ReleaseDawn)
         {
@@ -142,6 +157,8 @@ public class InGameManager : MonoBehaviour
         else if (state == InGameState.ReleaseEnd)
         {
             Debug.Log(" release end");
+            SoundManager.Instance.StopLoopSE();
+            SoundManager.Instance.PlaySE(_soundEffect[1]);
         }
     }
 
@@ -179,11 +196,13 @@ public class InGameManager : MonoBehaviour
         }
         else if (state == FlyPreparationState.Charge)
         {
+           _charge = Instantiate(_chargeEffect);
             Debug.Log("charge");
             ChargeCount();
         }
         else if (state == FlyPreparationState.Set)
         {
+            Destroy(_charge);
             Debug.Log("set");
             Debug.Log(FlyAngle);
         }
