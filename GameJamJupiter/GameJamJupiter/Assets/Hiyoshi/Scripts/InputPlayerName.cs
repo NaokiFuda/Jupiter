@@ -1,18 +1,16 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+// inputField内に入力されたプレイヤー名をGameManagerのplayerNameに保存させる
 public class InputPlayerName : MonoBehaviour
 {
-    private InputField _inputField;
+    private InputField _inputField;//unityのUIのInputFieldという機能
     private void Awake()
     {
-        _inputField = this.GetComponent<InputField>();
+        _inputField = GetComponent<InputField>();
     }
 
-    public void UpdateName()
+    
+    public void UpdateName()//inputFieldの機能でfieldに入力された値が変わったらこのメソッドが行われる
     {
         GameManager.Instance.Playername = _inputField.text;
     }
