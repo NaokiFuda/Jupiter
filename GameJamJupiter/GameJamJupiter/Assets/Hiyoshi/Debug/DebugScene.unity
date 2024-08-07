@@ -339,7 +339,6 @@ GameObject:
   - component: {fileID: 1191141358}
   - component: {fileID: 1191141357}
   - component: {fileID: 1191141356}
-  - component: {fileID: 1191141355}
   m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -367,18 +366,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1191141355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1191141353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 225a991c9ab72ba469009ef71f44b743, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1191141356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -423,7 +410,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1191141355}
+      - m_Target: {fileID: 1318905873}
         m_TargetAssemblyTypeName: DebugRankingData, Assembly-CSharp
         m_MethodName: DebugLoad
         m_Mode: 1
@@ -473,6 +460,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1191141353}
   m_CullTransparentMesh: 1
+--- !u!1 &1318905872
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1318905874}
+  - component: {fileID: 1318905873}
+  m_Layer: 0
+  m_Name: DebugRank
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1318905873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318905872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 225a991c9ab72ba469009ef71f44b743, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1318905874
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318905872}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 173.22139, y: 149.98544, z: -1.9608705}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1374698970
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,7 +516,6 @@ GameObject:
   - component: {fileID: 1374698975}
   - component: {fileID: 1374698974}
   - component: {fileID: 1374698973}
-  - component: {fileID: 1374698972}
   m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -513,18 +543,6 @@ RectTransform:
   m_AnchoredPosition: {x: -182.51, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1374698972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1374698970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 225a991c9ab72ba469009ef71f44b743, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1374698973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -569,7 +587,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1374698972}
+      - m_Target: {fileID: 1318905873}
         m_TargetAssemblyTypeName: DebugRankingData, Assembly-CSharp
         m_MethodName: DebugSave
         m_Mode: 1
@@ -998,3 +1016,4 @@ SceneRoots:
   - {fileID: 570213494}
   - {fileID: 2010157874}
   - {fileID: 996499920}
+  - {fileID: 1318905874}
