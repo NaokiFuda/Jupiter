@@ -49,13 +49,11 @@ public class CameraManager : MonoBehaviour
     public void CameraTergetObj(GameObject targetGameObject)
     {
         _targetObj = targetGameObject;
-        Debug.Log("Camera Target Changed");
     }
 
     private void CameraType(InGameState inGameState)
     {
         _inGameState = inGameState;
-        Debug.Log("Camera Target Changed");
     }
 
     private void FolllowObj()
