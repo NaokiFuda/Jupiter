@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CameraManager : MonoBehaviour
 {
-    [SerializeField] InGameManager ingameManager;
     [SerializeField] Vector3 defPos = new Vector3(-4.3f, 1.28f, -21f);
     Vector3 targetObjPos;
     GameObject targetObj;
