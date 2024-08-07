@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+[DefaultExecutionOrder(-10)]
 public class RankingTextScript : MonoBehaviour
 {
     [SerializeField] private Text[] rankingText;
@@ -8,11 +9,11 @@ public class RankingTextScript : MonoBehaviour
     {
         GameManager.Instance.AddRankingData();
         GameManager.Instance.SaveRankingData();
-        GameManager.Instance.Score = 0;
+        GameManager.Instance.Score = 0; //Scoreをリセット
         RankingToText();
     }
 
-    void RankingToText()
+    void RankingToText() //GameManager内のランキングデータをテキストに出力する
     {
         for (int i = 0; i < GameManager.Instance.RankNum; i++)
         {
