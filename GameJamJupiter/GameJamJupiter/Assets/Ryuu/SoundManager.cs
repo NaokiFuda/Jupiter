@@ -8,12 +8,12 @@ public class SoundManager : MonoBehaviour
 
 
     [SerializeField] AudioMixer _audioMixer;
-    [SerializeField] AudioSource _bgmAudioSource;
+    [SerializeField] AudioSource _inGameBgmAudioSource;
     [SerializeField] AudioSource _seAudioSource;
 
     protected void Awake()
     {
-        if (_bgmAudioSource == null) Debug.LogError("BGM AudioSource is null.");
+        if (_inGameBgmAudioSource == null) Debug.LogError("BGM AudioSource is null.");
         if (_seAudioSource == null) Debug.LogError("SE AudioSource is null.");
         if (_audioMixer == null) Debug.LogError("Audio Mixer is null.");
 
@@ -27,23 +27,33 @@ public class SoundManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
     /// <summary> BGMを再生 </summary> ///
     public void PlayBGM(AudioClip audioClipBGM)
     {
-        _bgmAudioSource.clip = audioClipBGM;
-        _bgmAudioSource.Play();
+        _inGameBgmAudioSource.clip = audioClipBGM;
+        _inGameBgmAudioSource.Play();
     }
-
     /// <summary> SEを再生 </summary> ///
     public void PlaySE(AudioClip audioClipSE)
     {
+        _seAudioSource.loop = false;
         _seAudioSource.PlayOneShot(audioClipSE);
+    }
+    public void PlayloopSE(AudioClip audioClipSE)
+    {
+        _seAudioSource.loop = true;
+        _seAudioSource.clip = audioClipSE;
+        _seAudioSource.Play();
+    }
+    public void StopLoopSE()
+    {
+        _seAudioSource.loop = false;
+        _seAudioSource.Stop();
     }
 
     public void MuteBGM(bool mute)
     {
-        _bgmAudioSource.mute = mute;
+        _inGameBgmAudioSource.mute = mute;
     }
 
     public void MuteSE(bool mute)
