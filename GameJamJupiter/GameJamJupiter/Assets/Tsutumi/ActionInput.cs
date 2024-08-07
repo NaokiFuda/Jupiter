@@ -8,10 +8,9 @@ public class ActionInput : MonoBehaviour
 
     private void Start()
     {
-        _actionKye = GameManager.Instance._actionKye;
-        _actionKye2 = GameManager.Instance._actionKye2;
+        //_actionKye = GameManager.Instance._actionKye;
+        //_actionKye2 = GameManager.Instance._actionKye2;
     }
-
     void Update()
     {
         if (IsKeyDawnActionKyeDown(_actionKye)) //stringで通るのか
