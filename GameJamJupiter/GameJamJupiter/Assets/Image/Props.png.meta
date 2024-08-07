@@ -550,6 +550,342 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Player002_Set001
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 1447
+        width: 1260
+        height: 1599
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c44c8d87f2020e42ad281a4e1086d7d
+      internalID: 1956401137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player002_Set002
+      rect:
+        serializedVersion: 2
+        x: 2279
+        y: 1442
+        width: 1328
+        height: 1597
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c0a0b01fe3e69c4dbab13cc1bc42f6c
+      internalID: 2144581281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player002_Set003
+      rect:
+        serializedVersion: 2
+        x: 3615
+        y: 1439
+        width: 1550
+        height: 1602
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1d2452b8fdd8c04ca6d30b9b5b23579
+      internalID: 143732086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fish001
+      rect:
+        serializedVersion: 2
+        x: 4100
+        y: 7554
+        width: 1089
+        height: 638
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7d280d7a2ca5ef4983cf9232367e6b5
+      internalID: 1488721891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Star001
+      rect:
+        serializedVersion: 2
+        x: 4287
+        y: 5955
+        width: 747
+        height: 743
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4ebbd86f5e07b14bb3a7d07e46e8723
+      internalID: 1721290900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Star002
+      rect:
+        serializedVersion: 2
+        x: 5111
+        y: 5444
+        width: 1329
+        height: 1298
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccc9c0c237283a649abea95a1518e6f1
+      internalID: -51872109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Star003
+      rect:
+        serializedVersion: 2
+        x: 6461
+        y: 5409
+        width: 1718
+        height: 1338
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87093204f9aed9e4cbb46ceaecbb170c
+      internalID: -715709451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player002_Set004
+      rect:
+        serializedVersion: 2
+        x: 5171
+        y: 1436
+        width: 1438
+        height: 1602
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a8f5f4167756384ca3f3e7b57c3cdc6
+      internalID: 1869899738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player002_Finish001
+      rect:
+        serializedVersion: 2
+        x: 6801
+        y: 1436
+        width: 1391
+        height: 1612
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4742c3d94330cbe44881ae92830ce4a1
+      internalID: -1250233028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player003_Set001
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 0
+        width: 1150
+        height: 1294
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8936f7f7ae887c4fb4e8ef723a2ab65
+      internalID: 554936861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fish002
+      rect:
+        serializedVersion: 2
+        x: 5211
+        y: 7968
+        width: 489
+        height: 217
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62ff6b9b1e1aaa24ebf3b9bbe6951f02
+      internalID: -1962541769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fish003
+      rect:
+        serializedVersion: 2
+        x: 5709
+        y: 7968
+        width: 488
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77b5efe485135ac43a4ca84cc66d1652
+      internalID: 1684026600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player003_Set002
+      rect:
+        serializedVersion: 2
+        x: 1798
+        y: 0
+        width: 1555
+        height: 1292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f6fffdd131e7894eaea8e6db3bde108
+      internalID: 5286344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player003_Set003
+      rect:
+        serializedVersion: 2
+        x: 3357
+        y: 0
+        width: 1303
+        height: 1290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79652b7264e147145950d06c80e325d8
+      internalID: 620574180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player003_Set004
+      rect:
+        serializedVersion: 2
+        x: 4660
+        y: 0
+        width: 1320
+        height: 1290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb86821cf4585384691a96803d95bdc7
+      internalID: -281292946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player003_Finish001
+      rect:
+        serializedVersion: 2
+        x: 6025
+        y: 18
+        width: 1365
+        height: 1304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dbf12ef5be69da43b5daea642407a7e
+      internalID: -233024811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -571,10 +907,26 @@ TextureImporter:
       Cloud001: 1181223376
       Dirt001: 749190854
       Earth001: -2116892947
+      Fish001: 1488721891
+      Fish002: -1962541769
+      Fish003: 1684026600
       LandingEffect001: -1234556171
       Player001: -1894672986
       Player002: 1316467359
+      Player002_Finish001: -1250233028
+      Player002_Set001: 1956401137
+      Player002_Set002: 2144581281
+      Player002_Set003: 143732086
+      Player002_Set004: 1869899738
       Player003: 1652751669
+      Player003_Finish001: -233024811
+      Player003_Set001: 554936861
+      Player003_Set002: 5286344
+      Player003_Set003: 620574180
+      Player003_Set004: -281292946
+      Star001: 1721290900
+      Star002: -51872109
+      Star003: -715709451
       Tree001: 1209683978
       Tree002: 1470513788
       Tree003: -1219835220

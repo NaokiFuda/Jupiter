@@ -97,8 +97,8 @@ public class EffectManager : MonoBehaviour
         {
             angle = Vector3.Angle(_targetObj.transform.position - lastPos, Vector3.down); 
         }
-        //エフェクトを180度回転させた後、落下物の移動したベクトルが下方向のベクトルとなす角度回転させた姿勢を維持する
-        _effectList[2].transform.rotation = new Quaternion(0,0,1,0) * Quaternion.Euler(0,0,angle);
+        //落下物の移動したベクトルが下方向のベクトルとなす角度回転させた姿勢を維持する
+        _effectList[2].transform.rotation = Quaternion.Euler(0,0,angle);
         
         if (!anim.GetBool("isFalling"))
         {
