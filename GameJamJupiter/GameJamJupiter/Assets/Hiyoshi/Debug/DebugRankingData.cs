@@ -6,7 +6,7 @@ public class DebugRankingData : MonoBehaviour
 {
     public void DebugSave()
     {
-        RankingDataList _rankingDataList = new RankingDataList()
+        RankingDataListClass rankingDataListClass = new RankingDataListClass()
         {
             rankingDataClassList = new List<RankingDataClass>(3)
             {
@@ -15,7 +15,7 @@ public class DebugRankingData : MonoBehaviour
                 new RankingDataClass() { name = "c", score = 300 }
             }
         };
-        GameManager.Instance.RankingDataList = _rankingDataList;
+        GameManager.Instance.RankingDataList = rankingDataListClass;
         GameManager.Instance.SortRanking();
         GameManager.Instance.SaveRankingData();
     }
@@ -26,5 +26,10 @@ public class DebugRankingData : MonoBehaviour
                      $"\n{GameManager.Instance.RankingDataList.rankingDataClassList[1].name} {GameManager.Instance.RankingDataList.rankingDataClassList[1].score}" +
                      $"\n{GameManager.Instance.RankingDataList.rankingDataClassList[2].name} {GameManager.Instance.RankingDataList.rankingDataClassList[2].score}";
         Debug.Log(tmp);
+    }
+
+    void DebugDeleteRanking()
+    {
+        PlayerPrefs.DeleteAll();
     }
 }

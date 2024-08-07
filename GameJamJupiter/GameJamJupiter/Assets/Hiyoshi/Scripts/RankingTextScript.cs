@@ -3,22 +3,22 @@ using UnityEngine.UI;
 
 public class RankingTextScript : MonoBehaviour
 {
-    private Text _rankingText;
-    private void Awake()
-    {
-        _rankingText = GetComponent<Text>();
-    }
-
+    [SerializeField] private Text[] rankingText;
     private void Start()
     {
+        GameManager.Instance.AddRankingData();
+        GameManager.Instance.SaveRankingData();
+        GameManager.Instance.Score = 0;
         RankingToText();
     }
 
-    public void RankingToText()
+    void RankingToText()
     {
-        string tmp = $"{GameManager.Instance.RankingDataList.rankingDataClassList[0].name} {GameManager.Instance.RankingDataList.rankingDataClassList[0].score}" +
-                     $"\n{GameManager.Instance.RankingDataList.rankingDataClassList[1].name} {GameManager.Instance.RankingDataList.rankingDataClassList[1].score}" +
-                     $"\n{GameManager.Instance.RankingDataList.rankingDataClassList[2].name} {GameManager.Instance.RankingDataList.rankingDataClassList[2].score}";
-        _rankingText.text = tmp;
+        for (int i = 0; i < GameManager.Instance.RankNum; i++)
+        {
+            string tmp =
+                $"{i + 1}位 {GameManager.Instance.RankingDataList.rankingDataClassList[i].name} スコア{GameManager.Instance.RankingDataList.rankingDataClassList[i].score}";
+            rankingText[i].text = tmp;
+        }
     }
 }
