@@ -18,7 +18,7 @@ public class RankingTextScript : MonoBehaviour
         for (int i = 0; i < GameManager.Instance.RankNum; i++)
         {
             string tmp =
-                $"{i + 1}位 : {GameManager.Instance.RankingDataList.rankingDataClassList[i].name.PadRight(10,' ')} スコア{GameManager.Instance.RankingDataList.rankingDataClassList[i].score.ToString("D5")}";
+                $"{i + 1}位 : {GameManager.Instance.RankingDataList.rankingDataClassList[i].name.PadRight(10,' ')} スコア{GameManager.Instance.RankingDataList.rankingDataClassList[i].score.ToString("D4")}";
             rankingText[i].text = tmp;
         }
     }
