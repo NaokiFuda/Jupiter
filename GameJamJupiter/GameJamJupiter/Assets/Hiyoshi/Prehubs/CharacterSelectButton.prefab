@@ -92,7 +92,6 @@ GameObject:
   - component: {fileID: 3025560716357408932}
   - component: {fileID: 8584232527245901176}
   - component: {fileID: 2180088918422789266}
-  - component: {fileID: 8727061700267446143}
   m_Layer: 5
   m_Name: CharacterSelectButton
   m_TagString: Untagged
@@ -201,29 +200,8 @@ MonoBehaviour:
         m_CallState: 2
   _enterSe: {fileID: 0}
   _clickedSe: {fileID: 0}
-  _animator: {fileID: 8727061700267446143}
+  _animator: {fileID: 0}
   _clickCoolTime: 1
---- !u!95 &8727061700267446143
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 583110010100250094}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4859848a15d86f8438e2c4e0f1d74133, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1054706487931074625
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,6 +213,7 @@ GameObject:
   - component: {fileID: 3973976939849713695}
   - component: {fileID: 6011353200173538238}
   - component: {fileID: 6329235986764401293}
+  - component: {fileID: 7773667961217150368}
   m_Layer: 5
   m_Name: AnimCHara
   m_TagString: Untagged
@@ -258,7 +237,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 8.1707, y: 0}
+  m_AnchoredPosition: {x: 5, y: 0}
   m_SizeDelta: {x: -26.3413, y: -10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6011353200173538238
@@ -299,3 +278,24 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &7773667961217150368
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054706487931074625}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4859848a15d86f8438e2c4e0f1d74133, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
