@@ -1000,7 +1000,7 @@ TextureImporter:
         width: 2205
         height: 627
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1008,6 +1008,111 @@ TextureImporter:
       bones: []
       spriteID: aa8e0892c6f43ae44830649a69caa602
       internalID: -614486052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharactorSelect01
+      rect:
+        serializedVersion: 2
+        x: 1839
+        y: 4439
+        width: 531
+        height: 703
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b17cc0eca5b4aa4c8c93d8dab2f1aa1
+      internalID: -1016146412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharactorSelect02
+      rect:
+        serializedVersion: 2
+        x: 2372
+        y: 4437
+        width: 535
+        height: 705
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 019b5355112c2334cb1c3a525f453d49
+      internalID: -147137464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharactorSelect0
+      rect:
+        serializedVersion: 2
+        x: 2907
+        y: 4439
+        width: 531
+        height: 703
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d467ff6897f542742a8d94590def5e3d
+      internalID: 1424020506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu001
+      rect:
+        serializedVersion: 2
+        x: 3435
+        y: 4603
+        width: 1719
+        height: 539
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29b1520459c6ecc4a943baeb9ea70066
+      internalID: 775795644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu002
+      rect:
+        serializedVersion: 2
+        x: 5159
+        y: 4766
+        width: 1050
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3c6f542d566ecb4f91fdf83cc26dc1f
+      internalID: -120710036
       vertices: []
       indices: 
       edges: []
@@ -1030,6 +1135,9 @@ TextureImporter:
       BurnEffect001: -1729099278
       BurnEffect002: 421032961
       BurnEffect003: 1183163013
+      CharactorSelect0: 1424020506
+      CharactorSelect01: -1016146412
+      CharactorSelect02: -147137464
       Cloud001: 1181223376
       Dirt001: 749190854
       Earth001: -2116892947
@@ -1037,6 +1145,8 @@ TextureImporter:
       Fish002: -1962541769
       Fish003: 1684026600
       LandingEffect001: -1234556171
+      Menu001: 775795644
+      Menu002: -120710036
       Player001: -1894672986
       Player001_Finish001: -1781297834
       Player001_Set001: 1222651387
